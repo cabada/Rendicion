@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Registro tutorias - ITCJ</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Encabezado -->
+	<header class="header">
+		<div class="container logo-nav-container logo-nav-container">
+			<a href="principal.html"><img src="Icono/ITCJ.png" class="logo"></a>
+			<div id="navigation" class="navigation">
+				<ul class="menu">
+					<li><a href="principal.html">Inicio</a>
+					<li><a href="#">Registro</a>
+						<ul>
+							<li><a href="registro_curso.html">Registro de Curso</a></li>
+							<li><a href="registro_cuerpos_academicos.html">Registro de Cuerpos academicos</a></li>
+							<li><a href="registro_profesores.html">Registro de Profesores</a></li>
+							<li><a href="registro_sabatico.html">Año Sabatico</a></li>
+							<li><a href="registro_tutorias.html">Registro de tutorias</a></li>
+							<li><a href="#">OrientaTec</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Programa</a>
+						<ul>
+							<li><a href="programa_educativo.html">Programa Educativo</a></li>
+							<li><a href="programa_delfin.html">Programa Delfin</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Carrera</a>
+						<ul>
+							<li><a href="especialidades_carreras.html">Especialidades de Carreras</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html">Cerrar Sesion</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+<!-- Contenido -->
+	<main class="main">
+		<div class="container">
+			<h1>REGISTRO DE TUTORIAS</h1>
+			<form name="formRegistro" action="#" method="post">
+				<table border="0" align="center">
+					<tr>
+						<td class="label">Tutores asignados:</td>
+						<td>
+							<input type="text" name="txtTutores_asignados" size="25" placeholder=" ">
+						</td>
+					</tr>
+					<tr>
+						<td class="label">Alumnos con tutoria grupal:</td>
+						<td>
+							<input type="text" name="txtAlumnos_grupal" size="25" placeholder=" ">
+						</td>
+					</tr>
+					<tr>
+						<td class="label">Encuentro con padres de familia:</td>
+						<td>
+							<input type="text" name="txtEcuentro_padres_familia" size="25" placeholder=" ">
+						</td>
+					</tr>
+					<tr>
+						<td class="label">Conferencias a alumnos de primer semestre:</td>
+						<td>
+							<input type="text" name="txtConferencias_alumnos_primer_semestre" size="25" placeholder=" ">
+						</td>
+					</tr>
+					<tr>
+						<td class="label">Alumnos que asistieron a conferencias:</td>
+						<td>
+							<input type="text" name="txtAlumnos_que_asistieron_conferencias" size="25" placeholder=" ">
+						</td>
+					</tr>
+					<tr>
+						<td class="label">Periodo:</td>
+						<td>
+							<select name="cboPeriodo">
+								<option value="1">Enero-Junio</option>
+								<option value="2">Agosto-Diciembre</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="titulo" colspan="2">
+							<input class="button" type="submit" name="btnRegistrar" value="Registrar">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</main>
+
+<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<strong>
+				<p id="p">
+					INSTITUTO TECNOLÓGICO DE CIUDAD JUÁREZ
+				<br>
+					Av. Tecnológico No. 1340 C.P. 32500 Ciudad Juárez, Chih. México
+				<br>
+					Las actualizaciones de esta página a cargo del Servicio Social del Departamento de Sistemas
+				</p>
+			</strong>
+		</div>
+	</footer>
+
+</body>
+</html>
