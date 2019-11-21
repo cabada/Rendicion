@@ -103,11 +103,24 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						...
+						<label>Nombre de curso</label>
+						<input type="text" id="nombre_curso_agregar" class="form-control input-group-sm">
+
+						<label>Periodo</label>
+						<input type="text" id="periodo_agregar" class="form-control input-group-sm">
+
+						<label>Horas de capacitacion</label>
+						<input type="text" id="horas_capacitacion_agregar" class="form-control input-group-sm">
+
+						<label>Numero de participantes base</label>
+						<input type="text" id="numero_participantes_base_agregar" class="form-control input-group-sm">
+
+						<label>Numero de participantes Honorarios/Itinerarios</label>
+						<input type="text" id="numero_participantes_honorarios_agregar" class="form-control input-group-sm">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-primary" id="btn_agregar_curso_actual">Guardar nuevo registro</button>
 					</div>
 				</div>
 			</div>
@@ -121,17 +134,30 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Editar Registro</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<div class="modal-body">
-						...
+						<label>Nombre de curso</label>
+						<input type="text" id="nombre_curso_editar" class="form-control input-group-sm">
+
+						<label>Periodo</label>
+						<input type="text" id="periodo_editar" class="form-control input-group-sm">
+
+						<label>Horas de capacitacion</label>
+						<input type="text" id="horas_capacitacion_editar" class="form-control input-group-sm">
+
+						<label>Numero de participantes base</label>
+						<input type="text" id="numero_participantes_base_editar" class="form-control input-group-sm">
+
+						<label>Numero de participantes Honorarios/Itinerarios</label>
+						<input type="text" id="numero_participantes_honorarios_editar" class="form-control input-group-sm">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-warning" id="btn_editar_curso_actual">Guardar cambios</button>
 					</div>
 				</div>
 			</div>
