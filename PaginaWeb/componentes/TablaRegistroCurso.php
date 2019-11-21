@@ -1,3 +1,9 @@
+<?php
+
+    require_once "../php/conexion.php";
+    $conexion = conexion();
+
+?>
 
 <div class="row">
     <div class="col-sm-12">
@@ -22,20 +28,35 @@
                 <td>Eliminar</td>
             </tr>
 
-            <tr>
-                <td>Moodle como herramienta para el desempeño del docente.</td>
-                <td>Ene 2018</td>
-                <td>30</td>
-                <td>9</td>
-                <td>9</td>
-                <td>18</td>
-                <td>
-                    <button class="btn btn-warning fas fa-pencil-alt" data-toggle="modal" data-target="#modalEdicion"></button>
-                </td>
-                <td>
-                    <button class="btn btn-danger <i fas fa-window-close "></button>
-                </td>
-            </tr>
+            <?php
+
+                $sql="select nombre_curso,periodo,horas_capacitacion,numero_participantes_base,
+                numero_participantes_honorarios from cursos_formacion_docente_actualizacion_profesional";
+
+                $resultado = mysqli_query($conexion,$sql);
+
+                while($buscar=mysqli_fetch_row($resultado)) {
+
+                    ?>
+                    <tr>
+                        <td><?php echo $buscar[0]?></td>
+                        <td><?php echo $buscar[1]?></td>
+                        <td><?php echo $buscar[2]?></td>
+                        <td><?php echo $buscar[3]?></td>
+                        <td><?php echo $buscar[4]?></td>
+                        <td><?php echo $buscar[3]+$buscar[4]?></td>
+                        <td>
+                            <button class="btn btn-warning fas fa-pencil-alt" data-toggle="modal"
+                                    data-target="#modalEdicion"></button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger <i fas fa-window-close "></button>
+                        </td>
+                    </tr>
+                    <?php
+
+                         }
+            ?>
         </table>
     </div>
 

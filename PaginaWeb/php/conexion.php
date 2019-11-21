@@ -12,10 +12,4 @@
 
         }
 
-        if(conexion()){
-            echo "conectado";
-        }
-        else{
-            echo "no conectado";
-        }
 ?>
