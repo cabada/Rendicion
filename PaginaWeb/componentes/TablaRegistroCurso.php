@@ -30,27 +30,34 @@
 
             <?php
 
-                $sql="select nombre_curso,periodo,horas_capacitacion,numero_participantes_base,
+                $sql="select id_curso,nombre_curso,periodo,horas_capacitacion,numero_participantes_base,
                 numero_participantes_honorarios from cursos_formacion_docente_actualizacion_profesional";
 
                 $resultado = mysqli_query($conexion,$sql);
 
                 while($buscar=mysqli_fetch_row($resultado)) {
 
+                    $datos = $buscar[0]."||".
+                             $buscar[1]."||".
+                             $buscar[2]."||".
+                             $buscar[3]."||".
+                             $buscar[4]."||".
+                             $buscar[5];
+
                     ?>
                     <tr>
-                        <td><?php echo $buscar[0]?></td>
                         <td><?php echo $buscar[1]?></td>
                         <td><?php echo $buscar[2]?></td>
                         <td><?php echo $buscar[3]?></td>
                         <td><?php echo $buscar[4]?></td>
-                        <td><?php echo $buscar[3]+$buscar[4]?></td>
+                        <td><?php echo $buscar[5]?></td>
+                        <td><?php echo $buscar[4]+$buscar[5]?></td>
                         <td>
                             <button class="btn btn-warning fas fa-pencil-alt" data-toggle="modal"
-                                    data-target="#modalEdicion"></button>
+                                    data-target="#modalEdicion" onclick=" agregaform('<?php echo $datos?>')"></button>
                         </td>
                         <td>
-                            <button class="btn btn-danger <i fas fa-window-close "></button>
+                            <button class="btn btn-danger <i fas fa-window-close " onclick="preguntarSiNo('<?php echo $buscar[0]?>')"></button>
                         </td>
                     </tr>
                     <?php

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
 	<title>Registro de curso - ITCJ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,6 +14,7 @@
 
 
 	<script src="librerias/jquery-3.4.1.min.js"></script>
+    <script src="js/funciones.js"></script>
 	<script src="librerias/bootstrap/js/bootstrap.js"></script>
 	<script src="librerias/alertifyjs/alertify.js"></script>
 </head>
@@ -120,8 +121,7 @@
 						<input type="text" id="numero_participantes_honorarios_agregar" class="form-control input-group-sm">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-						<button type="button" class="btn btn-primary" id="btn_agregar_curso_actual">Guardar nuevo registro</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_agregar_curso_actual">Agregar Nuevo Registro</button>
 					</div>
 				</div>
 			</div>
@@ -141,6 +141,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
+						<input type="text" hidden="" id="id_curso">
 						<label>Nombre de curso</label>
 						<input type="text" id="nombre_curso_editar" class="form-control input-group-sm">
 
@@ -188,6 +189,26 @@
 
 	});
 
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btn_agregar_curso_actual').click(function () {
+            nombre_curso = $('#nombre_curso_agregar').val();
+            periodo = $('#periodo_agregar').val();
+            horas_capacitacion = $('#horas_capacitacion_agregar').val();
+            numero_participantes_base = $('#numero_participantes_base_agregar').val();
+            numero_participantes_honorarios = $('#numero_participantes_honorarios_agregar').val();
+            agregarDatos(nombre_curso,periodo,horas_capacitacion,numero_participantes_base,
+                                  numero_participantes_honorarios);
+        });
+
+		$('#btn_editar_curso_actual').click(function () {
+			actualizaDatos();
+		});
+
+    });
 
 </script>
 </body>
