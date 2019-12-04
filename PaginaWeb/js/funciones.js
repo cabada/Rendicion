@@ -82,7 +82,7 @@ function preguntarSiNo(id_curso) {
 }
 
 function eliminarDatos(id_curso) {
-    cadena = "id_curso="+id_curso;
+    cadena = "id_curso="+id_curso ;
 
     $.ajax({
         type:"post",

@@ -7,15 +7,16 @@
 
 <div class="row">
     <div class="col-sm-12">
-        <h2>REGISTRO DE CURSOS DE FORMACIÓN DOCENTE Y ACTUALIZACIÓN PROFESIONAL</h2>
+        <h1>REGISTRO DE CURSOS DE FORMACIÓN DOCENTE Y ACTUALIZACIÓN PROFESIONAL</h1>
         <caption>
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
                 Agregar nuevo
                 <span class="fas fa-plus"></span>
             </button>
         </caption>
+        <br>
         <table class="table table-hover table-condensed table-bordered table-striped white-background">
-
+        <br>
 
             <tr>
                 <td>Nombre de curso</td>
